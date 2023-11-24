@@ -4,7 +4,7 @@ using UnityEngine.Splines;
 public class FollowSplineLinear : MonoBehaviour
 {
     public SplineContainer SplineLinear;
-    public float duration = 5f;
+    public float duration = 2f;
 
     private float progress = 0f;
 
@@ -26,5 +26,32 @@ public class FollowSplineLinear : MonoBehaviour
 
             transform.position = new Vector2(worldPosition.x, worldPosition.y);
         }
+        if (duration > 0)
+        {
+            progress += Time.deltaTime / duration;
+            progress = Mathf.Clamp01(progress);
+
+            if (progress >= 1f)
+            {
+                // If the object has reached the end of the spline, reset progress and duration
+                ResetProgressAndDuration();
+            }
+        }
+        else
+        {
+            // If the duration is 0 or less, reset progress
+            ResetProgress();
+        }
+    }
+
+    public void ResetProgress()
+    {
+        progress = 0f;
+    }
+
+    private void ResetProgressAndDuration()
+    {
+        progress = 0f;
+        duration = 2f; 
     }
 }
