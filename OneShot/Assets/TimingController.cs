@@ -15,11 +15,14 @@ public class TimingController : MonoBehaviour
 
     public float startClickTimer;
     public float clickTimer;
+    public float startIntervalTimer;
+    public float cubeTimer;
 
     public bool isGameOver;
 
     public SpriteRenderer whiteRect;
-    public Intervals intervals;
+    public BeatIntervals intervals;
+    public GameObject hitIndication;
 
     private void Start()
     {
@@ -33,6 +36,12 @@ public class TimingController : MonoBehaviour
     {
         clickTimer -= Time.deltaTime;
         timer -= Time.deltaTime;
+        cubeTimer -= Time.deltaTime;
+
+        if(cubeTimer <= 0)
+        {
+            cubeTimer = 0;
+        }
 
         if (delayBeforeGameOver < 0)
         {
@@ -43,7 +52,9 @@ public class TimingController : MonoBehaviour
             StopAllCoroutines();
         }
 
-        if(timerCanBeStopped == true)
+        hitIndication.transform.localScale = new Vector3(cubeTimer, cubeTimer, cubeTimer);
+
+        if (timerCanBeStopped == true)
         {
             delayBeforeGameOver -= Time.deltaTime;
         }
@@ -101,14 +112,21 @@ public class TimingController : MonoBehaviour
                 
                 StartCoroutine(UpBulletSpeed());
                 Debug.Log("UUUUP");
+
                 break;
+
             case BulletType.middle:
+
                 StartCoroutine(StandartBulletSpeed());
                 Debug.Log("MIIIIDDLE");
+
                 break;
+
             case BulletType.down:
+
                 StartCoroutine(DownBulletSpeed());
                 Debug.Log("DOOOOOWN");
+
                 break;
         }
     }
@@ -119,22 +137,26 @@ public class TimingController : MonoBehaviour
         if(timer <= 0f && isGameOver == false)
         {
             CallCurrentBullet();
-            randomReactionSpeed = Random.Range(0, 3);
-            if (randomReactionSpeed == 0)
+            randomReactionSpeed = Random.Range(1, 4);
+            if (randomReactionSpeed == 2)
             {
+
                 currentBulletType = BulletType.middle;
+
                 Debug.Log("Standart Bullet Incoming");
+
+            }
+            else if (randomReactionSpeed == 3)
+            {
+                currentBulletType = BulletType.up;
+
+                Debug.Log("Up Bullet Incoming");
 
             }
             else if (randomReactionSpeed == 1)
             {
-                currentBulletType = BulletType.up;
-                Debug.Log("Up Bullet Incoming");
-
-            }
-            else if (randomReactionSpeed == 2)
-            {
                 currentBulletType = BulletType.down;
+
                 Debug.Log("Down Bullet Incoming");
 
             }

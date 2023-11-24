@@ -3,15 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class DecaledBeatManage : MonoBehaviour
+public class DecaledBeatManager : MonoBehaviour
 {
-    public static DecaledBeatManage Instance;
-
-    private void Awake()
-    {
-        Instance = this;
-    }
-
     public float bpm;
     public float sampledTime;
     public AudioSource audioSource;
@@ -21,7 +14,7 @@ public class DecaledBeatManage : MonoBehaviour
     {
         foreach (BeatIntervals interval in intervals)
         {
-            sampledTime = (audioSource.timeSamples / (audioSource.clip.frequency * interval.GetIntervalLenght(bpm)));
+            sampledTime = (audioSource.timeSamples / (audioSource.clip.frequency * interval.GetIntervalLenght(bpm)) - 0.05f);
             interval.CheckForNewInterval(sampledTime);
         }
     }
