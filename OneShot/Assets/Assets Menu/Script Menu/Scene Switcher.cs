@@ -3,17 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class SceneSwitcher : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public void PlayGame ()
+    public void OptionsGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-
-    public void QuitGame()
+    public void Back()
     {
-        Debug.Log("Quit!");
-        Application.Quit(); 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }
