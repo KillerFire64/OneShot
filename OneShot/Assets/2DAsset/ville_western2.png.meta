@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e75595f392546664ba3be698811dd164
+guid: edfc660d70fc5ba4a8ba44173d0b29b5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 346184967576917917
-    second: shot 5_0
+      213: -8639489738334753264
+    second: ville_western2_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -110,22 +110,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: shot 5_0
+      name: ville_western2_0
       rect:
         serializedVersion: 2
-        x: 311
-        y: 75
-        width: 256
-        height: 980
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        x: 0
+        y: 0
+        width: 5760
+        height: 1425
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d979003d465edc400800000000000000
-      internalID: 346184967576917917
+      spriteID: 01eace16bdd5a1880800000000000000
+      internalID: -8639489738334753264
       vertices: []
       indices: 
       edges: []
@@ -133,7 +133,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 39ba2eb2d82d85d4d94ce75787435fa4
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      shot 5_0: 346184967576917917
+      ville_western2_0: -8639489738334753264
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
