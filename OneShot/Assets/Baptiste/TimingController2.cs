@@ -87,13 +87,27 @@ public class TimingController2 : MonoBehaviour
 
         if(isDead == false && timer <= 0)
         {
-            if(Input.GetMouseButtonDown(0) && successfulClick == false)
+            if(Input.GetKeyDown(KeyCode.E) && successfulClick == false)
             {
                 successfulClick = true;
                 playerSwing = true;
-                FindAngleMouse.Instance.ShootBullet();
+                FindAngleMouse.Instance.ShootDownBullet();
                 whiteRect.color = Color.red;
                 //rajouter animation de tir
+            }
+            else if (Input.GetKeyDown(KeyCode.R) && successfulClick == false)
+            {
+                successfulClick = true;
+                playerSwing = true;
+                FindAngleMouse.Instance.ShootStandartBullet();
+                whiteRect.color = Color.red;
+            }
+            else if (Input.GetKeyDown(KeyCode.T) && successfulClick == false)
+            {
+                successfulClick = true;
+                playerSwing = true;
+                FindAngleMouse.Instance.ShootUpBullet();
+                whiteRect.color = Color.red;
             }
         }
 

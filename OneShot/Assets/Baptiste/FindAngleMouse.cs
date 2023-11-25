@@ -50,24 +50,21 @@ public class FindAngleMouse : MonoBehaviour
 
     }
 
-    public void ShootBullet()
+    public void ShootStandartBullet()
     {
-        if (angle >= 30 && _currentMousePosition.y > CenterOfRotation.transform.localPosition.y)
-        {
-            Debug.Log("EN HAUUUUT");
-            timer = startTimer * 3;
-        }
-        else if (angle >= 30 && _currentMousePosition.y < CenterOfRotation.transform.localPosition.y)
-        {
-            Debug.Log("EN BAAAAS");
-            timer = startTimer;
-        }
-        else
-        {
-            Debug.Log("AU CEEENTRE");
-            timer = startTimer * 2;
-        }
+        timer = startTimer * 2;
+        isShooting = true;
+    }
 
+    public void ShootDownBullet()
+    {
+        timer = startTimer;
+        isShooting = true;
+    }
+
+    public void ShootUpBullet()
+    {
+        timer = startTimer * 3;
         isShooting = true;
     }
 }
