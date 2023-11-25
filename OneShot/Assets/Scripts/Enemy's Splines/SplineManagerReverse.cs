@@ -6,21 +6,27 @@ public class SplineManagerReverse : MonoBehaviour
     public MonoBehaviour followSplineLinearReverse;
     public MonoBehaviour followSplineLowReverse;
 
+    public static SplineManagerReverse Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     // Method to enable a random spline script
-    public void EnableRandomSplineScript()
+    public void EnableRandomSplineScriptReverse()
     {
         // Randomly pick one of the spline scripts
         MonoBehaviour[] splines = new MonoBehaviour[] {
-            followSplineHighReverse,
             followSplineLinearReverse,
+            followSplineHighReverse,
             followSplineLowReverse
         };
 
-        // Randomly pick and enable one of the scripts
-        EnableSplineScript(splines[Random.Range(0, splines.Length)]);
+        EnableSplineScriptReverse(splines[TimingController2.Instance.randomReactionSpeed]);
     }
 
-    private void EnableSplineScript(MonoBehaviour scriptToEnable)
+    private void EnableSplineScriptReverse(MonoBehaviour scriptToEnable)
     {
         // Disable all spline scripts first
         followSplineHighReverse.enabled = false;
