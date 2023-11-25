@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 951a385955c290b4aa581eca9ce8d293
+guid: 78874f2d3d5acb34e8a35ee6dd99da6f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3240178919299798887
-    second: mechant_0
+      213: -637295040063964034
+    second: tennis_mechant11_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mechant_0
+      name: tennis_mechant11_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 201
-        height: 933
+        x: 354
+        y: 15
+        width: 427
+        height: 935
       alignment: 5
       pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 767d2955f8d67fc20800000000000000
-      internalID: 3240178919299798887
+      spriteID: e7c7edf998fd727f0800000000000000
+      internalID: -637295040063964034
       vertices: []
       indices: 
       edges: []
@@ -133,7 +133,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 896260626debe8043a75351d21f0df24
+    spriteID: 327951fa3c9f69643aef1a519343bf73
     internalID: 0
     vertices: []
     indices: 
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      mechant_0: 3240178919299798887
+      tennis_mechant11_0: -637295040063964034
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
