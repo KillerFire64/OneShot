@@ -8,7 +8,7 @@ public class TimingController2 : MonoBehaviour
     public SpriteRenderer whiteRect;
     public GameObject hitInfo;
 
-    private int randomReactionSpeed;
+    public int randomReactionSpeed;
     public float timer;
 
     public float startTimer;
@@ -28,6 +28,10 @@ public class TimingController2 : MonoBehaviour
 
     public GameObject DecaledBeatObject;
     public GameObject BeatObject;
+
+    public FollowSplineHighReverse followSplineHighReverse;
+    public FollowSplineLinearReverse followSplineLinearReverse;
+    public FollowSplineLowReverse followSplineLowReverse;
 
     public static TimingController2 Instance;
 
@@ -93,7 +97,6 @@ public class TimingController2 : MonoBehaviour
                 playerSwing = true;
                 FindAngleMouse.Instance.ShootDownBullet();
                 whiteRect.color = Color.red;
-                //rajouter animation de tir
             }
             else if (Input.GetKeyDown(KeyCode.R) && successfulClick == false)
             {
@@ -138,16 +141,18 @@ public class TimingController2 : MonoBehaviour
             randomReactionSpeed = Random.Range(0, 3);
             if (randomReactionSpeed == 0)
             {
-                timer += startTimer * 2;
+                timer += startTimer*2;
                 successfulClick = false;
+                followSplineLinearReverse.StartTravel();
 
                 Debug.Log("Standart Bullet Incoming");
 
             }
             else if (randomReactionSpeed == 1)
             {
-                timer += startTimer * 3;
+                timer += startTimer * 4;
                 successfulClick = false;
+                followSplineHighReverse.StartTravel();
 
                 Debug.Log("Up Bullet Incoming");
 
@@ -156,6 +161,7 @@ public class TimingController2 : MonoBehaviour
             {
                 timer += startTimer;
                 successfulClick = false;
+                followSplineLowReverse.StartTravel();
 
                 Debug.Log("Down Bullet Incoming");
 
@@ -201,6 +207,7 @@ public class TimingController2 : MonoBehaviour
         playerSwing = false;
         successfulClick = false;
         isCallingBullet = false;
+
         //rajouter animation de tir ennemi
     }
 

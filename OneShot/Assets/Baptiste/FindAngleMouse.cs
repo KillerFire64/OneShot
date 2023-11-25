@@ -10,6 +10,10 @@ public class FindAngleMouse : MonoBehaviour
     private Vector2 _currentMousePosition;
     public float angle;
 
+    public FollowSplineHigh splineHigh;
+    public FollowSplineLinear splineLinear;
+    public FollowSplineLow splineLow;
+
     public float timer;
     public float startTimer;
 
@@ -52,19 +56,22 @@ public class FindAngleMouse : MonoBehaviour
 
     public void ShootStandartBullet()
     {
-        timer = startTimer * 2;
+        timer = startTimer*1.5f;
         isShooting = true;
+        splineLinear.StartTravel();
     }
 
     public void ShootDownBullet()
     {
         timer = startTimer;
         isShooting = true;
+        splineLow.StartTravel();
     }
 
     public void ShootUpBullet()
     {
-        timer = startTimer * 3;
+        timer = startTimer * 2;
         isShooting = true;
+        splineHigh.StartTravel();
     }
 }
