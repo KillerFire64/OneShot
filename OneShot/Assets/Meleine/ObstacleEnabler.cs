@@ -77,7 +77,7 @@ public class ObstacleEnable : MonoBehaviour
 
     public void SpawnObstacle()
     {
-        spawnTimer = Random.RandomRange(minSpawnTimer, maxSpawnTimer);
+        spawnTimer = Random.Range(minSpawnTimer, maxSpawnTimer);
         Mathf.FloorToInt(spawnTimer);
     }
 }

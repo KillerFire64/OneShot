@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TimingController2 : MonoBehaviour
 {
@@ -32,6 +33,8 @@ public class TimingController2 : MonoBehaviour
     public FollowSplineHighReverse followSplineHighReverse;
     public FollowSplineLinearReverse followSplineLinearReverse;
     public FollowSplineLowReverse followSplineLowReverse;
+
+    public Animator animator;
 
     public static TimingController2 Instance;
 
@@ -116,7 +119,7 @@ public class TimingController2 : MonoBehaviour
 
         if(isDead)
         {
-            //Rajouter effets de la mort
+            SceneManager.LoadScene(2);
         }
 
         StandartBullet();
@@ -218,6 +221,13 @@ public class TimingController2 : MonoBehaviour
         playerSwing = false;
         successfulClick = false;
         audioSource.Play();
+
+        successfulClick = true;
+        playerSwing = true;
+        FindAngleMouse.Instance.ShootStandartBullet();
+        whiteRect.color = Color.red;
+        timer = 0;
+        randomReactionSpeed = 0;
     }
 
     public void SetOnBeat()
@@ -226,7 +236,6 @@ public class TimingController2 : MonoBehaviour
         {
             if(isFirstShot2)
             {
-                timer = startTimer * 2 - 0.05f;
                 isFirstShot = false;
                 isFirstShot2 = false;
             }

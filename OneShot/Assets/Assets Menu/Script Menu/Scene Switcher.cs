@@ -16,12 +16,8 @@ public class SceneSwitcher : MonoBehaviour
     }
     public void RestartTheGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         print("the build is working");
     }
-    public void ContinueGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        print("the build is working");
-    }
+
 }

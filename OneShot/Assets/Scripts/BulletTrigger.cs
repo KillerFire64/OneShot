@@ -1,17 +1,17 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BulletTrigger : MonoBehaviour
 {
-    // Reference to the SplineManagerReverse component on the bullet
-    public SplineManagerReverse bulletSplineManagerReverse;
+    public GameObject bullet;
 
-    private void OnTriggerEnter2D(UnityEngine.Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        // Check if the triggering object is a Bullet
-        if (other.CompareTag("Bullet"))
+        if (other.CompareTag("Obstacle") && FindAngleMouse.Instance.isShooting == true)
         {
-            // Call the method to enable a random spline script
-            //bulletSplineManagerReverse.EnableRandomSplineScriptReverse();
+            Debug.Log("t'es mort");
+            Destroy(bullet);
+            SceneManager.LoadScene(2);
         }
     }
 }

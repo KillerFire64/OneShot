@@ -5,10 +5,6 @@ using UnityEngine;
 
 public class FindAngleMouse : MonoBehaviour
 {
-    public GameObject Player;
-    public GameObject CenterOfRotation;
-    private Vector2 _currentMousePosition;
-    public float angle;
 
     public FollowSplineHigh splineHigh;
     public FollowSplineLinear splineLinear;
@@ -32,17 +28,6 @@ public class FindAngleMouse : MonoBehaviour
         {
             timer -= Time.deltaTime;
         }
-        
-
-        _currentMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        var mousePos_xy = new Vector2(_currentMousePosition.x, _currentMousePosition.y);
-        var center_xy = new Vector2(CenterOfRotation.transform.localPosition.x, CenterOfRotation.transform.localPosition.y);
-
-        var vector1 = center_xy - mousePos_xy; // VectorToMoveTo
-        var vector2 = center_xy - new Vector2(Player.transform.position.x, Player.transform.position.y); // Vector at the center line of the bottle.
-
-        angle = Vector2.Angle(vector1.normalized, vector2.normalized);
 
         if(timer <= 0 )
         {
