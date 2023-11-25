@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ville_western_0: 7090034376757462198
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
