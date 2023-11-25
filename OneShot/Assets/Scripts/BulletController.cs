@@ -20,6 +20,7 @@ public class BallMovement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+    Debug.Log("JE SUIS UN DEBUG ZEBI");
         if (canChangeDirection)
         {
             StartCoroutine(ChangeDirectionCoroutine());
