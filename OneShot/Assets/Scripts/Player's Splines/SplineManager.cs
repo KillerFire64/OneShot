@@ -25,7 +25,7 @@ public class SplineManager : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.T) && splineHigh.progress <= 0.1f)
         {
             EnableSplineScript(followSplineHigh);
-            splineHigh.duration = TimingController2.Instance.startTimer * 4;
+            splineHigh.duration = TimingController2.Instance.startTimer * 3;
         }
     }
 

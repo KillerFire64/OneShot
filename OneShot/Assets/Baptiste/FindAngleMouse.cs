@@ -56,7 +56,7 @@ public class FindAngleMouse : MonoBehaviour
 
     public void ShootStandartBullet()
     {
-        timer = startTimer*1.5f;
+        timer = startTimer * 2f;
         isShooting = true;
         splineLinear.StartTravel();
     }
@@ -70,7 +70,7 @@ public class FindAngleMouse : MonoBehaviour
 
     public void ShootUpBullet()
     {
-        timer = startTimer * 2;
+        timer = startTimer * 3;
         isShooting = true;
         splineHigh.StartTravel();
     }

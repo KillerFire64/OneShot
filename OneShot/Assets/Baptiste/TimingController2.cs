@@ -141,7 +141,7 @@ public class TimingController2 : MonoBehaviour
             randomReactionSpeed = Random.Range(0, 3);
             if (randomReactionSpeed == 0)
             {
-                timer += startTimer*2;
+                timer += startTimer * 2;
                 successfulClick = false;
                 followSplineLinearReverse.StartTravel();
 
@@ -150,7 +150,7 @@ public class TimingController2 : MonoBehaviour
             }
             else if (randomReactionSpeed == 1)
             {
-                timer += startTimer * 4;
+                timer += startTimer * 3;
                 successfulClick = false;
                 followSplineHighReverse.StartTravel();
 

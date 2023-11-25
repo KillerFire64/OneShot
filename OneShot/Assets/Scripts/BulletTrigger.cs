@@ -11,7 +11,7 @@ public class BulletTrigger : MonoBehaviour
         if (other.CompareTag("Bullet"))
         {
             // Call the method to enable a random spline script
-            bulletSplineManagerReverse.EnableRandomSplineScriptReverse();
+            //bulletSplineManagerReverse.EnableRandomSplineScriptReverse();
         }
     }
 }

@@ -2569,6 +2569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SplineLinearReverse: {fileID: 1336858851}
   duration: 2
+  progress: 0
 --- !u!114 &1828788998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2583,6 +2584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SplineLinearReverse: {fileID: 1186643274}
   duration: 2
+  progress: 0
 --- !u!114 &1828788999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2597,6 +2599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SplineLinearReverse: {fileID: 969091745}
   duration: 0.75
+  progress: 0
 --- !u!114 &1828789000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2657,6 +2660,9 @@ MonoBehaviour:
   followSplineHighReverse: {fileID: 1828788999}
   followSplineLinearReverse: {fileID: 1828788998}
   followSplineLowReverse: {fileID: 1828788997}
+  splineHigh: {fileID: 1828788999}
+  splineLinear: {fileID: 1828788998}
+  splineLow: {fileID: 1828788997}
 --- !u!4 &1828789004
 Transform:
   m_ObjectHideFlags: 0

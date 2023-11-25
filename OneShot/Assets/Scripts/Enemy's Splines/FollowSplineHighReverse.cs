@@ -6,13 +6,14 @@ public class FollowSplineHighReverse : MonoBehaviour
 {
     private Coroutine coroutine;
     public SplineContainer SplineLinearReverse;
-    public float duration = 2f;
+    public float duration = TimingController2.Instance.startTimer * 3;
 
-    private float progress = 0f;
+    public float progress = 0f;
 
     void Start()
     {
         transform.position = SplineLinearReverse.transform.TransformPoint(SplineLinearReverse.Spline.EvaluatePosition(0));
+        duration = TimingController2.Instance.startTimer * 3;
     }
 
 

@@ -7,14 +7,14 @@ public class FollowSplineHigh : MonoBehaviour
 
     private Coroutine coroutine;
     public SplineContainer SplineLinear;
-    public float duration = TimingController2.Instance.startTimer * 4;
+    public float duration = TimingController2.Instance.startTimer * 3;
 
     public float progress = 0f;
 
     void Start()
     {
         transform.position = SplineLinear.transform.TransformPoint(SplineLinear.Spline.EvaluatePosition(0));
-        duration = TimingController2.Instance.startTimer * 4;
+        duration = TimingController2.Instance.startTimer * 3;
     }
 
 
