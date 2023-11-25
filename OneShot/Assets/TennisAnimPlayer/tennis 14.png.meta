@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 8dce356ab69e1494d85c4ae8a2c076a6
+guid: c8cf173602e958747bbb03cb29406809
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -308675816076585676
-    second: shot 24_0
+      213: 6077868042381139576
+    second: tennis 14_0
+  - first:
+      213: -6328095086061138050
+    second: tennis 14_1
+  - first:
+      213: -3252538500052895400
+    second: tennis 14_2
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -110,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: shot 24_0
+      name: tennis 14_0
       rect:
         serializedVersion: 2
-        x: 311
-        y: 75
-        width: 256
-        height: 980
+        x: 524
+        y: 52
+        width: 359
+        height: 878
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +130,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 43550001bfc57bbf0800000000000000
-      internalID: -308675816076585676
+      spriteID: 87e93d958cce85450800000000000000
+      internalID: 6077868042381139576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tennis 14_1
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 354
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7f4e620c071e28a0800000000000000
+      internalID: -6328095086061138050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tennis 14_2
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 345
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 859b0168779acd2d0800000000000000
+      internalID: -3252538500052895400
       vertices: []
       indices: 
       edges: []
@@ -141,7 +189,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      shot 24_0: -308675816076585676
+      tennis 14_0: 6077868042381139576
+      tennis 14_1: -6328095086061138050
+      tennis 14_2: -3252538500052895400
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
