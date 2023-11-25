@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6c3629e8a100bf348b67bfbb8a022c00
+guid: 11f496a6bd53e0e4eaff2edd8e6927ee
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1730618557131943701
-    second: It's OK_0
+      213: 7090034376757462198
+    second: ville_western_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: It's OK_0
+      name: ville_western_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 598
-        height: 500
+        width: 5760
+        height: 1425
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: be0937c679b9bf7e0800000000000000
-      internalID: -1730618557131943701
+      spriteID: 6b4cfe773bcd46260800000000000000
+      internalID: 7090034376757462198
       vertices: []
       indices: 
       edges: []
