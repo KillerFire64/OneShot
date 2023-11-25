@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      poule_volante_0: 3087893086617167898
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
