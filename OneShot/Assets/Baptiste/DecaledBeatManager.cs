@@ -14,7 +14,7 @@ public class DecaledBeatManager : MonoBehaviour
     {
         foreach (BeatIntervals interval in intervals)
         {
-            sampledTime = (audioSource.timeSamples / (audioSource.clip.frequency * interval.GetIntervalLenght(bpm)) - 0.05f);
+            sampledTime = (audioSource.timeSamples / (audioSource.clip.frequency * interval.GetIntervalLenght(bpm)) - 0.01f);
             interval.CheckForNewInterval(sampledTime);
         }
     }

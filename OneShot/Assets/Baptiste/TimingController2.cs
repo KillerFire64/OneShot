@@ -75,7 +75,13 @@ public class TimingController2 : MonoBehaviour
                 playerSwing = true;
                 FindAngleMouse.Instance.ShootBullet();
                 whiteRect.color = Color.red;
+                //rajouter animation de tir
             }
+        }
+
+        if(isDead)
+        {
+            //Rajouter effets de la mort
         }
 
         StandartBullet();
@@ -91,43 +97,12 @@ public class TimingController2 : MonoBehaviour
         down
     }
 
-    /*public void CallCurrentBullet()
-    {
-        switch (currentBulletType)
-        {
-            case BulletType.up:
-
-                StartCoroutine(UpBulletSpeed());
-                Debug.Log("UUUUP");
-                isCallingBullet = false;
-
-                break;
-
-            case BulletType.middle:
-
-                StartCoroutine(StandartBulletSpeed());
-                Debug.Log("MIIIIDDLE");
-                isCallingBullet = false;
-
-                break;
-
-            case BulletType.down:
-
-                StartCoroutine(DownBulletSpeed());
-                Debug.Log("DOOOOOWN");
-                isCallingBullet = false;
-
-                break;
-        }
-    }*/
-
 
     public void CallBullet()
     {
 
         if (isCallingBullet == false && isDead == false && playerSwing == false)
         {
-            //CallCurrentBullet();
             randomReactionSpeed = Random.Range(0, 3);
             if (randomReactionSpeed == 0)
             {
@@ -158,33 +133,13 @@ public class TimingController2 : MonoBehaviour
             }
         }
         isCallingBullet = true;
-        //SetTimerAccordingToCurrentBullet();
     }
-
-    /*void SetTimerAccordingToCurrentBullet()
-    {
-        switch (currentBulletType)
-        {
-            case BulletType.up:
-                UpBullet();
-
-                break;
-            case BulletType.middle:
-                StandartBullet();
-
-                break;
-            case BulletType.down:
-                DownBullet();
-
-                break;
-        }
-    }*/
 
 
 
     public void StandartBullet()
     {
-        if(timer <= 0 && randomReactionSpeed == 0 && isDead == false)
+        if(timer <= 0 && randomReactionSpeed == 0 && isDead == false) //rajouter condition d'obstacle
         {
             clickGreenTimer = startGreenTimer;
             isGreen = true;
@@ -194,7 +149,7 @@ public class TimingController2 : MonoBehaviour
 
     public void UpBullet()
     {
-        if (timer <= 0 && randomReactionSpeed == 1 && isDead == false)
+        if (timer <= 0 && randomReactionSpeed == 1 && isDead == false) //rajouter condition d'obstacle
         {
             clickGreenTimer = startGreenTimer;
             isGreen = true;
@@ -204,7 +159,7 @@ public class TimingController2 : MonoBehaviour
 
     public void DownBullet()
     {
-        if (timer <= 0 && randomReactionSpeed == 2 && isDead == false)
+        if (timer <= 0 && randomReactionSpeed == 2 && isDead == false) //rajouter condition d'obstacle
         {
             clickGreenTimer = startGreenTimer;
             isGreen = true;
@@ -217,5 +172,6 @@ public class TimingController2 : MonoBehaviour
         playerSwing = false;
         successfulClick = false;
         isCallingBullet = false;
+        //rajouter animation de tir ennemi
     }
 }

@@ -770,9 +770,9 @@ MonoBehaviour:
   hitInfo: {fileID: 582955148}
   timer: 0
   startTimer: 0.75
-  deathTime: -0.3
+  deathTime: -0.25
   clickGreenTimer: 0
-  startGreenTimer: 0.3
+  startGreenTimer: 0.25
   isCallingBullet: 0
   successfulClick: 0
   playerSwing: 0
