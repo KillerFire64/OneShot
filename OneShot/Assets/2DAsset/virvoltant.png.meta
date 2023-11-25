@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      virvoltant_0: -6247883398675399979
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

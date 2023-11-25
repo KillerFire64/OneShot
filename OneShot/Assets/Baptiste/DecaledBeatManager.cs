@@ -10,12 +10,13 @@ public class DecaledBeatManager : MonoBehaviour
     public AudioSource audioSource;
     public BeatIntervals[] intervals;
 
-    private void Update()
+    private void FixedUpdate()
     {
         foreach (BeatIntervals interval in intervals)
         {
-            sampledTime = (audioSource.timeSamples / (audioSource.clip.frequency * interval.GetIntervalLenght(bpm)) - 0.01f);
+            sampledTime = (audioSource.timeSamples / (audioSource.clip.frequency * interval.GetIntervalLenght(bpm)) - 0.06f);
             interval.CheckForNewInterval(sampledTime);
         }
     }
+
 }

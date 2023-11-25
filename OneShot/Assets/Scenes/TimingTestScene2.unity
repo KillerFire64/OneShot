@@ -230,7 +230,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &148676230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,6 +250,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1786172786}
         m_TargetAssemblyTypeName: TimingController2, Assembly-CSharp
         m_MethodName: CallBullet
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1786172786}
+        m_TargetAssemblyTypeName: TimingController2, Assembly-CSharp
+        m_MethodName: SetOnBeat
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -747,6 +759,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1786172787}
   - component: {fileID: 1786172786}
+  - component: {fileID: 1786172788}
   m_Layer: 0
   m_Name: TimingController
   m_TagString: Untagged
@@ -770,12 +783,18 @@ MonoBehaviour:
   hitInfo: {fileID: 582955148}
   timer: 0
   startTimer: 0.75
-  deathTime: -0.25
+  deathTime: -0.3
   clickGreenTimer: 0
-  startGreenTimer: 0.25
+  startGreenTimer: 0.3
   isCallingBullet: 0
   successfulClick: 0
   playerSwing: 0
+  isMenu: 0
+  isFirstShot: 0
+  isFirstShot2: 0
+  DecaledBeatObject: {fileID: 148676229}
+  BeatObject: {fileID: 1951529467}
+  audioSource: {fileID: 148676231}
 --- !u!4 &1786172787
 Transform:
   m_ObjectHideFlags: 0
@@ -791,6 +810,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1786172788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786172785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f457a4e3c3dce9342b37a9a4c6dd51b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useTestBeat: 0
+  pulseSize: 2
+  returnSpeed: 5
 --- !u!1 &1951529467
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,7 +843,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1951529468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -955,6 +989,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 646200231}
+        m_TargetAssemblyTypeName: PulseToTheBeat, Assembly-CSharp
+        m_MethodName: Pulse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1786172788}
         m_TargetAssemblyTypeName: PulseToTheBeat, Assembly-CSharp
         m_MethodName: Pulse
         m_Mode: 1

@@ -1,11 +1,10 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class TimingController2 : MonoBehaviour
 {
-    BulletType currentBulletType;
-
     public SpriteRenderer whiteRect;
     public GameObject hitInfo;
 
@@ -23,8 +22,16 @@ public class TimingController2 : MonoBehaviour
     private bool isDead;
     public bool successfulClick;
     public bool playerSwing;
+    public bool isMenu;
+    public bool isFirstShot;
+    public bool isFirstShot2;
+
+    public GameObject DecaledBeatObject;
+    public GameObject BeatObject;
 
     public static TimingController2 Instance;
+
+    public AudioSource audioSource;
 
     private void Awake()
     {
@@ -34,12 +41,23 @@ public class TimingController2 : MonoBehaviour
     private void Start()
     {
         isDead = false;
-        timer = startTimer - 0.1f;
+        playerSwing = true;
+        successfulClick = true;
+        isCallingBullet = true;
+        isMenu = true;
+        isFirstShot = true;
     }
 
     private void Update()
     {
-        if(successfulClick == false)
+
+        if(Input.GetKeyDown(KeyCode.Return))
+        {
+            isMenu = false;
+            StartShot();
+        }
+
+        if (successfulClick == false && isMenu == false)
         {
             timer -= Time.deltaTime;
         }
@@ -69,7 +87,7 @@ public class TimingController2 : MonoBehaviour
 
         if(isDead == false && timer <= 0)
         {
-            if(Input.GetMouseButtonDown(0))
+            if(Input.GetMouseButtonDown(0) && successfulClick == false)
             {
                 successfulClick = true;
                 playerSwing = true;
@@ -106,7 +124,6 @@ public class TimingController2 : MonoBehaviour
             randomReactionSpeed = Random.Range(0, 3);
             if (randomReactionSpeed == 0)
             {
-                currentBulletType = BulletType.middle;
                 timer += startTimer * 2;
                 successfulClick = false;
 
@@ -115,7 +132,6 @@ public class TimingController2 : MonoBehaviour
             }
             else if (randomReactionSpeed == 1)
             {
-                currentBulletType = BulletType.up;
                 timer += startTimer * 3;
                 successfulClick = false;
 
@@ -124,7 +140,6 @@ public class TimingController2 : MonoBehaviour
             }
             else if (randomReactionSpeed == 2)
             {
-                currentBulletType = BulletType.down;
                 timer += startTimer;
                 successfulClick = false;
 
@@ -173,5 +188,28 @@ public class TimingController2 : MonoBehaviour
         successfulClick = false;
         isCallingBullet = false;
         //rajouter animation de tir ennemi
+    }
+
+    public void StartShot()
+    {
+        DecaledBeatObject.SetActive(true);
+        BeatObject.SetActive(true);
+        playerSwing = false;
+        successfulClick = false;
+        audioSource.Play();
+    }
+
+    public void SetOnBeat()
+    {
+        if(isFirstShot)
+        {
+            if(isFirstShot2)
+            {
+                timer = startTimer * 2 - 0.05f;
+                isFirstShot = false;
+                isFirstShot2 = false;
+            }
+            isFirstShot2 = true;
+        }
     }
 }
