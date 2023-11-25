@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cf4f75fb98eaac64eada408d873fe0d2
+guid: c6595636a7e9d25478bad9dd4fa4baec
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4905527433587146681
-    second: gentil_0
+      213: -8574050770718243004
+    second: shot 23_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gentil_0
+      name: shot 23_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 226
-        height: 875
+        x: 311
+        y: 75
+        width: 371
+        height: 980
       alignment: 4
       pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 740ca1d2ac01cebb0800000000000000
-      internalID: -4905527433587146681
+      spriteID: 447cc25504ad20980800000000000000
+      internalID: -8574050770718243004
       vertices: []
       indices: 
       edges: []
@@ -133,7 +133,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: f7609be847a20a441b131d151d3a56fd
+    spriteID: 69b113b33526f6a41851ff82e58dc3cf
     internalID: 0
     vertices: []
     indices: 
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      gentil_0: -4905527433587146681
+      shot 23_0: -8574050770718243004
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

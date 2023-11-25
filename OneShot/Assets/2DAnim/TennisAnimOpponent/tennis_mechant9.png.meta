@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cf4f75fb98eaac64eada408d873fe0d2
+guid: b3ab26879c128af47b8d8e0d35325125
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4905527433587146681
-    second: gentil_0
+      213: 2474602038396282022
+    second: tennis_mechant9_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -110,22 +110,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gentil_0
+      name: tennis_mechant9_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 226
-        height: 875
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        x: 510
+        y: 15
+        width: 271
+        height: 935
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 740ca1d2ac01cebb0800000000000000
-      internalID: -4905527433587146681
+      spriteID: 6a46113617d875220800000000000000
+      internalID: 2474602038396282022
       vertices: []
       indices: 
       edges: []
@@ -133,7 +133,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: f7609be847a20a441b131d151d3a56fd
+    spriteID: cd243bd2aa72af64c96a32e47dea14bc
     internalID: 0
     vertices: []
     indices: 
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      gentil_0: -4905527433587146681
+      tennis_mechant9_0: 2474602038396282022
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
