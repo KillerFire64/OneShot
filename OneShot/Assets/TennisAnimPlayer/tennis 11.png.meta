@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8dce356ab69e1494d85c4ae8a2c076a6
+guid: 32ee6cedfde78564996837708f32ab40
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -308675816076585676
-    second: shot 24_0
+      213: 8136015525839868036
+    second: tennis 11_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: shot 24_0
+      name: tennis 11_0
       rect:
         serializedVersion: 2
-        x: 311
-        y: 75
-        width: 256
-        height: 980
+        x: 524
+        y: 52
+        width: 445
+        height: 878
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 43550001bfc57bbf0800000000000000
-      internalID: -308675816076585676
+      spriteID: 4809fb8a30fe8e070800000000000000
+      internalID: 8136015525839868036
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      shot 24_0: -308675816076585676
+      tennis 11_0: 8136015525839868036
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
